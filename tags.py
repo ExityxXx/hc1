@@ -26,7 +26,14 @@ class Element:
         Context.pop()
 
     def _create(self):
-        from htmlconstructor import Html
+        from hc1 import Html
+        
+        if not hasattr(Html, "_current_site"):
+            raise ValueError("Корня Html не существует")
+        
+        if Html._current_site is None:
+            raise AttributeError("Ваш контекстный менеджер, возможно, не соединен с корнем")
+        
         htmlsheet = Html._current_site.sheet()
         tag = htmlsheet.new_tag(self.tag_name)
         self._format_params(tag, self.params)
