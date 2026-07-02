@@ -1,4 +1,4 @@
-from .context import Context
+from context import Context
 
 class Element:
     def __init__(self, tag_name: str, **params: dict) -> None:
