@@ -26,7 +26,7 @@ class Element:
         Context.pop()
 
     def _create(self):
-        from .htmlconstructor import Html
+        from htmlconstructor import Html
         htmlsheet = Html._current_site.sheet()
         tag = htmlsheet.new_tag(self.tag_name)
         self._format_params(tag, self.params)
