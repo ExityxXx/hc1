@@ -1,5 +1,5 @@
 from bs4 import BeautifulSoup, Tag
-from .tags import (
+from tags import (
     Element,
     Heading,
     Button,
@@ -10,7 +10,7 @@ from .tags import (
     Script,
     Br
 )
-from .context import Context
+from context import Context
 
 class Html:
     _сurrent_site = None
